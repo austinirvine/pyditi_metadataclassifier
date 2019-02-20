@@ -15,7 +15,7 @@ df = pd.read_csv('cancer_res_csv.csv')
 all_inputs = df[['skews_r_f','skews_r_fc','skews_g_f','skews_g_fc', 'skews_b_f','skews_b_fc','kurtosis_r_f','kurtosis_r_fc','kurtosis_g_f','kurtosis_g_fc', 'kurtosis_b_f','kurtosis_b_fc']].values
 all_classes = df['cancer'].values
 
-(train_inputs, test_inputs, train_classes, test_classes) = train_test_split(all_inputs, all_classes, train_size=0.8, random_state=1)
+(train_inputs, test_inputs, train_classes, test_classes) = train_test_split(all_inputs, all_classes, train_size=0.7, random_state=1)
 
 dtc = DecisionTreeClassifier()
 dtc.fit(train_inputs,train_classes)
